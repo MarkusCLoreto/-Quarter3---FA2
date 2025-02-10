@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    padding: 50px;
+  }
+  #calculator {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  input[type="number"] {
+    padding: 10px;
+    width: 80px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #474c52;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }

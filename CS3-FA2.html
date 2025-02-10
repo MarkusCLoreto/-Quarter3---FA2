@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <div id="calculator">
+    <h1>Simple Calculator</h1>
+    <p>Enter two numbers and click an operation to see the result.</p>
+
+    <input id="num1" type="number" placeholder="First number">
+    <input id="num2" type="number" placeholder="Second number">
+
+    <br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="calculate('%')">%</button>
+
+    <p id="result">Results will be displayed here.</p>
+  </div>
+  <script src="JS.js"></script>
+
+</body>
+</html>
