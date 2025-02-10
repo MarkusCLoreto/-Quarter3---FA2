@@ -1,25 +1,61 @@
-function calculate(operation) {
+function printResult(message) {
+    document.getElementById('result').innerHTML = message;
+  }
+
+  function add() {
     const num1 = parseFloat(document.getElementById('num1').value);
     const num2 = parseFloat(document.getElementById('num2').value);
-    let resultText = '';
-
     if (isNaN(num1) || isNaN(num2)) {
-      resultText = 'Please enter valid numbers.';
-    } else {
-      if (operation === '+') {
-        resultText = 'The sum of ' + num1 + ' and ' + num2 + ' is ' + (num1 + num2) + '.';
-      } else if (operation === '-') {
-        resultText = 'The difference between ' + num1 + ' and ' + num2 + ' is ' + (num1 - num2) + '.';
-      } else if (operation === '*') {
-        resultText = 'The product of ' + num1 + ' and ' + num2 + ' is ' + (num1 * num2) + '.';
-      } else if (operation === '/') {
-        resultText = num2 !== 0 ? 'The quotient of ' + num1 + ' and ' + num2 + ' is ' + (num1 / num2) + '.' : 'Division by zero is not allowed.';
-      } else if (operation === '%') {
-        resultText = num2 !== 0 ? 'The remainder of ' + num1 + ' divided by ' + num2 + ' is ' + (num1 % num2) + '.' : 'Division by zero is not allowed.';
-      } else {
-        resultText = 'Unknown operation.';
-      }
+      printResult('Please enter valid numbers.');
+      return;
     }
+    printResult('The sum of ' + num1 + ' and ' + num2 + ' is ' + (num1 + num2) + '.');
+  }
 
-    document.getElementById('result').textContent = resultText;
+  function subtract() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+      printResult('Please enter valid numbers.');
+      return;
+    }
+    printResult('The difference between ' + num1 + ' and ' + num2 + ' is ' + (num1 - num2) + '.');
+  }
+
+  function multiply() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+      printResult('Please enter valid numbers.');
+      return;
+    }
+    printResult('The product of ' + num1 + ' and ' + num2 + ' is ' + (num1 * num2) + '.');
+  }
+
+  function divide() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+      printResult('Please enter valid numbers.');
+      return;
+    }
+    if (num2 === 0) {
+      printResult('Division by zero is not allowed.');
+      return;
+    }
+    printResult('The quotient of ' + num1 + ' and ' + num2 + ' is ' + (num1 / num2) + '.');
+  }
+
+  function modulus() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+      printResult('Please enter valid numbers.');
+      return;
+    }
+    if (num2 === 0) {
+      printResult('Division by zero is not allowed.');
+      return;
+    }
+    printResult('The remainder of ' + num1 + ' divided by ' + num2 + ' is ' + (num1 % num2) + '.');
   }
